@@ -1,0 +1,26 @@
+
+
+// How to calculate 
+// hit reconstruction
+// efficiency?
+
+// Now implemented in the CalibrateAndApplyThreshold processor:
+
+const char * col_rec2sim_name = "EmcRecToSim";
+
+try {
+     LCCollection * col_rec2sim = evtP->getCollection(col_rec2sim_name);
+     for (int i = 0; i < col_rec2sim->getNumberOfElements(); i++) {
+          const LCRelation * rel_rec2sim = (const LCRelation *)col_rec2sim->getElementAt(i);
+          CalorimeterHit * hit_rec = (CalorimeterHit *)rel_rec2sim->getFrom();
+          SimCalorimeterHit * hit_sim = (SimCalorimeterHit *)rel_rec2sim->getTo();
+          /* 
+          . . .
+          . .
+          .
+          */
+     }  
+} catch (lcio::DataNotAvailableException err) { 
+     std::cout << "Sorry, collection "<< col_rec2sim_name  << " not found." << std::endl; 
+}
+     

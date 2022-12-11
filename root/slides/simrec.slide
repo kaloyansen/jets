@@ -1,0 +1,28 @@
+   __________________________
+  /          Mokka          /  Simulated Monte Carlo:
+  --------------------------   TBCern1006_01_dchxy_new__QGSP_BERT__e-_010GeV_300672_10000evt.???.sclio
+                |
+  <EVENT::SimCalorimeterHit>
+                |
+       	        V                                    _________________
+     __________________________                     /                 |
+    /                       <------ noitarbilaC ----- --- -- -        |
+   / Digi /MIPEnergy, /calib /                    /                   |
+  / MIPEenergy = 0.147 MeV <========== esioN =====O0o                 |
+  --------------------------                    /   0                 |
+                |                               |   O  H A M B U R G  |
+  <EVENT::RawCalorimeterHit>   	                |   0                 |
+                |                               |   o     ~|          |
+                V                               |   o   ___|__=_      /
+     _________________________                  |   0   ]______/     /
+    /    SimpleHitSearch   =========== Noise =====o0O               /
+   / - - - - - - - - - - - -/                  	|                  /
+  /     Calibrate *calib  <-------- noitarbilaC ------- --- -- -  /
+  ------------------------                      |________________/
+                |
+  <EVENT::CalorimeterHit>
+                |
+                V
+   ___________________________
+  /         Analysis         /
+  ---------------------------
