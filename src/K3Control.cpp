@@ -69,11 +69,7 @@ void K3Control::Freeze(bool frozen)
      fLast->SetBit(TH1::kCanRebin, !frozen); 
 }
 
-void K3Control::Book(Int_t dimension,
-		     const char * name, const char * title, const char * xTitle, const char * yTitle, const char * zTitle,
-		     Int_t nbinsx, Double_t xlow, Double_t xup,
-		     Int_t nbinsy, Double_t ylow, Double_t yup,
-		     Int_t nbinsz, Double_t zlow, Double_t zup)
+void K3Control::Book(Int_t dimension, const char * name, const char * title, const char * xTitle, const char * yTitle,const char * zTitle, Int_t nbinsx, Double_t xlow, Double_t xup, Int_t nbinsy, Double_t ylow, Double_t yup, Int_t nbinsz, Double_t zlow, Double_t zup)
 {//    Info("Book", "calling constant bin histogram constructor");
      fLast = 0;
 //     TH1 * h = 0;
@@ -113,8 +109,7 @@ void K3Control::Book(Int_t dimension,
 
 
 
-TH1 * K3Control::Identify(TString name,
-			  const char * project, const char * reproject)
+TH1 * K3Control::Identify(TString name, const char * project, const char * reproject)
 {
      if (!fList) Error("Identify", "!fList");
      //    Info("Identify", "begin");
@@ -347,8 +342,7 @@ void K3Control::Panopm()
 
 
 
-TList * K3Control::FamilyList(TString name,
-			      const char * project, const char * reproject)
+TList * K3Control::FamilyList(TString name, const char * project, const char * reproject)
 {//all hists with same root
      if (!fList) return fList;
      TList * family = new TList();
