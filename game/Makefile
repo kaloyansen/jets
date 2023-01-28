@@ -24,7 +24,7 @@ clean:
 	rm -fv $(OBJS)
 
 clobber:	clean
-	rm -f $(TARGET)
+	rm -fv $(TARGET)
 
 new:	clobber all
 

@@ -26,7 +26,6 @@
 
 #include "include/gobo.h"
 
-
 using namespace std;
 
 struct Packet {
